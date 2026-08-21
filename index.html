@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josh Rudolph</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #faf8f4;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 4rem 6rem;
+    }
+
+    main {
+      max-width: 480px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: 0.3px;
+      margin-bottom: 0.5rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #1a1a1a;
+      width: 100%;
+      margin-bottom: 0.6rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 2.2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 1rem;
+      border-bottom: 1px solid transparent;
+      width: fit-content;
+      transition: border-color 0.15s;
+    }
+
+    nav a:hover {
+      border-bottom-color: #1a1a1a;
+    }
+
+    nav a .arrow {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 3rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Josh Rudolph</h1>
+    <hr />
+    <p class="subtitle">Researcher</p>
+    <nav>
+      <a href="https://www.linkedin.com/in/josh-rudolph-8520456b/" target="_blank" rel="noopener">
+        LinkedIn <span class="arrow">↗</span>
+      </a>
+      <a href="https://scholar.google.com/citations?user=OwrKEqcAAAAJ" target="_blank" rel="noopener">
+        Google Scholar <span class="arrow">↗</span>
+      </a>
+      <a href="https://github.com/joshrud/" target="_blank" rel="noopener">
+        GitHub <span class="arrow">↗</span>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
