@@ -70,8 +70,16 @@ nav a .arrow { font-size: 0.8rem; color: #888; }
 
 .sim-column .dna-stats + .dna-stats { margin-top: 0.5rem; }
 
-/* below two columns the simulation drops underneath, styled like any other section */
-@media (max-width: 1100px) {
+/* Give the columns more room by easing the page gutters as the window narrows,
+   so the two-column layout survives well below a maximised desktop window. */
+@media (max-width: 1250px) {
+  body { padding: 4rem 3rem 3rem; }
+  .page { gap: 2.5rem; }
+}
+
+/* Only below this does the simulation drop underneath, styled like any other section */
+@media (max-width: 820px) {
+  body { padding: 3rem 2rem; }
   .page { grid-template-columns: 1fr; gap: 0; }
   .sim-column { position: static; max-width: 700px; }
   .sim-column .dna-section {
