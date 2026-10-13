@@ -46,34 +46,31 @@
     </section>
   </main>
 
-    <aside class="sim-panel">
-      <p class="sim-caption">Tumour microenvironment simulation &mdash; lung adenocarcinoma, 9.5 days</p>
-      <img src="assets/img/tme_sim.gif"
+  <aside class="sim-column">
+    <section class="dna-section">
+      <p class="dna-title">Simulated tumour microenvironment &middot; lung adenocarcinoma &middot; 9.5 days</p>
+      <img class="sim-img" src="assets/img/tme_sim.gif"
            alt="Time-lapse of a simulated lung adenocarcinoma spheroid growing to 700 micrometres while white T cells infiltrate and kill tumour cells"
            width="460" height="460" loading="lazy" decoding="async" />
-      <p class="sim-legend">
-        <span><span class="swatch" style="background:#d62728"></span>G1</span>
-        <span><span class="swatch" style="background:#2ca02c"></span>S/G2</span>
-        <span><span class="swatch" style="background:#facc1a"></span>mitosis</span>
-        <span><span class="swatch" style="background:#80389e"></span>killed</span>
-        <span><span class="swatch" style="background:#ffffff;border:1px solid #ccc"></span>T cell</span>
-      </p>
-      <p class="sim-note">
-        An agent-based model where every cell is a node and touching cells share an edge.
-        Oxygen, glucose and signalling molecules diffuse across that contact network, so cells
-        deep inside the spheroid starve and arrest &mdash; the red G1 core you see forming.
-        Each division draws new somatic mutations from a measured per-division rate, so driver
-        subclones emerge on their own.
-      </p>
-      <p class="sim-note">
-        Around day 4 the white cytotoxic T cells arrive and begin killing (purple). They are not
-        placed there: dendritic cells carry tumour antigen to the draining lymph node, prime naive
-        T&nbsp;cells over ~20&nbsp;hours, and the expanded effectors return through the blood &mdash;
-        a round trip the model runs off-screen.
-        <a href="https://github.com/joshrud/tme_sim" target="_blank" rel="noopener">Source
-        <span class="arrow">&#8599;</span></a>
-      </p>
-    </aside>
+      <div class="section-footer">
+        <div>
+          <p class="dna-stats">95,631 cells &middot; 700 &micro;m across &middot; 10,036 killed by T cells</p>
+          <p class="dna-legend">
+            <span><span class="swatch" style="background:#d62728"></span>G1</span>
+            <span><span class="swatch" style="background:#2ca02c"></span>S/G2</span>
+            <span><span class="swatch" style="background:#facc1a"></span>mitosis</span>
+            <span><span class="swatch" style="background:#80389e"></span>killed</span>
+            <span><span class="swatch" style="background:#fff;border:1px solid #ccc"></span>T cell</span>
+          </p>
+          <p class="dna-stats">Agent-based &middot; every cell a node, touching cells an edge &middot; oxygen
+            and nutrients diffuse across that network, starving the core into the red G1 centre</p>
+          <p class="dna-stats">T cells are not placed &middot; dendritic cells carry antigen to the lymph node
+            and primed effectors return through the blood &middot; arriving around day 4</p>
+        </div>
+        <a class="copy-btn" href="https://github.com/joshrud/tme_sim" target="_blank" rel="noopener">Source</a>
+      </div>
+    </section>
+  </aside>
   </div>
 
   <script src="assets/js/dna.js"></script>
