@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
+  <div class="page">
   <main>
     <h1>Josh Rudolph</h1>
     <hr />
@@ -44,6 +45,36 @@
       </div>
     </section>
   </main>
+
+    <aside class="sim-panel">
+      <p class="sim-caption">Tumour microenvironment simulation &mdash; lung adenocarcinoma, 9.5 days</p>
+      <img src="assets/img/tme_sim.gif"
+           alt="Time-lapse of a simulated lung adenocarcinoma spheroid growing to 700 micrometres while white T cells infiltrate and kill tumour cells"
+           width="460" height="460" loading="lazy" decoding="async" />
+      <p class="sim-legend">
+        <span><span class="swatch" style="background:#d62728"></span>G1</span>
+        <span><span class="swatch" style="background:#2ca02c"></span>S/G2</span>
+        <span><span class="swatch" style="background:#facc1a"></span>mitosis</span>
+        <span><span class="swatch" style="background:#80389e"></span>killed</span>
+        <span><span class="swatch" style="background:#ffffff;border:1px solid #ccc"></span>T cell</span>
+      </p>
+      <p class="sim-note">
+        An agent-based model where every cell is a node and touching cells share an edge.
+        Oxygen, glucose and signalling molecules diffuse across that contact network, so cells
+        deep inside the spheroid starve and arrest &mdash; the red G1 core you see forming.
+        Each division draws new somatic mutations from a measured per-division rate, so driver
+        subclones emerge on their own.
+      </p>
+      <p class="sim-note">
+        Around day 4 the white cytotoxic T cells arrive and begin killing (purple). They are not
+        placed there: dendritic cells carry tumour antigen to the draining lymph node, prime naive
+        T&nbsp;cells over ~20&nbsp;hours, and the expanded effectors return through the blood &mdash;
+        a round trip the model runs off-screen.
+        <a href="https://github.com/joshrud/tme_sim" target="_blank" rel="noopener">Source
+        <span class="arrow">&#8599;</span></a>
+      </p>
+    </aside>
+  </div>
 
   <script src="assets/js/dna.js"></script>
 </body>
